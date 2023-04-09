@@ -20,9 +20,6 @@ app.get('/contacts/:id', (req, res) => {
     res.status(404).json({ message: 'Contact not found' });
   }
 });
-
-
-
   
 // Crear contacto
 app.post('/contacts', (req, res) => {
@@ -54,10 +51,8 @@ app.post('/contacts', (req, res) => {
       console.log('New contact has been created', newContact);
       res.send(newContact);
     });
-  });
+});
   
-  
-
 // Editar contacto
 
 app.put('/contacts/:id', (req, res) => {
@@ -116,9 +111,6 @@ app.delete('/contacts/:id', (req, res) => {
     console.log('Contacts has been deleted', deletedContact);
 });
   
-
-
-
 //Seteo del puerto
 
 const PORT = 3001
